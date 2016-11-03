@@ -250,6 +250,12 @@ snippet file
 		require => [ Package['${11:package}'], File['${12:file}'], ],
 	}
 
+snippet link
+	file { '${1:filename}':
+		ensure => link,
+		target => '${2:target}',
+	}
+
 snippet archive
 	archive { '${1:filename}':
 		ensure     => ${2:present},
